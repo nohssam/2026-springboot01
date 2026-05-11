@@ -7,4 +7,8 @@
    <select id="guestBookList" resultType="GuestBookVO">
        select * from guestbook where g_active = 0
    </select>
+    <insert id="guestBookInsert" parameterType="GuestBookVO">
+        insert into guestbook(g_writer, g_subject, g_content, g_email, g_pwd, g_regdate)
+        values(#{g_writer}, #{g_subject}, #{g_content}, #{g_email}, #{g_pwd}, now())
+    </insert>
 </mapper>

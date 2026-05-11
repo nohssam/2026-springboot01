@@ -9,7 +9,7 @@ import java.util.List;
 public interface GuestBookMapper {
     List<GuestBookVO> guestBookList();
     GuestBookVO guestBookDetail(String g_idx);
-    int guestBookWInsert(GuestBookVO gvo);
+    int guestBookInsert(GuestBookVO gvo);
     int guestBookDelete(String g_idx);
     int guestBookUpdate(GuestBookVO gvo);
 }
